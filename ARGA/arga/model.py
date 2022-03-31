@@ -1,5 +1,6 @@
 from layers import GraphConvolution, GraphConvolutionSparse, InnerProductDecoder
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS

@@ -1,4 +1,5 @@
-import tensorflow as tf
+#import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 from model import ARGA, ARVGA, Discriminator
 from optimizer import OptimizerAE, OptimizerVAE
@@ -8,6 +9,7 @@ import inspect
 from preprocessing import preprocess_graph, sparse_to_tuple, mask_test_edges, construct_feed_dict
 flags = tf.app.flags
 FLAGS = flags.FLAGS
+tf.compat.v1.disable_eager_execution() #add
 
 def get_placeholder(adj):
     placeholders = {
